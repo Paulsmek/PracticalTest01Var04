@@ -47,11 +47,12 @@ public class PracticalTest01Var04MainActivity extends AppCompatActivity {
                     String name = text1.getText().toString();
                     String group = text2.getText().toString();
                     if ((name == null && box1.isChecked()) || (group == null && box2.isChecked())) {
-                        //Toast.makeText(this, "eroare no text", Toast.LENGTH_LONG).show();
+                        Toast.makeText(null, "eroare no text", Toast.LENGTH_LONG).show();
                     }
-                    else {
-                        textT.setText(name + " " + group);
-                    }
+                    textT.setText((box1.isChecked() ? name:"") + " " + (box2.isChecked() ? group:""));
+                }
+                else {
+                    textT.setText("");
                 }
 
             }
